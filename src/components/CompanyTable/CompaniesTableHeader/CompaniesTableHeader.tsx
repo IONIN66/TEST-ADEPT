@@ -2,14 +2,16 @@ import { useDispatch } from "react-redux";
 import { toggleAllSelectCompanies } from "store/companiesSlice";
 
 import style from './CompaniesTableHeader.module.scss';
+import { ChangeEvent } from "react";
 
 
 export const CompaniesTableHeader = () => {
 
     const dispatch = useDispatch();
 
-    const handleAllSelectCompanies = () => {
-        dispatch(toggleAllSelectCompanies())
+    const handleAllSelectCompanies = (event: ChangeEvent<HTMLInputElement>) => {
+        const isAllSelectCheckbox = event.target.checked;
+        dispatch(toggleAllSelectCompanies(isAllSelectCheckbox))
     }
 
     return (

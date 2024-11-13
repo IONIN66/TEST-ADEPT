@@ -37,10 +37,10 @@ export const companiesSlice = createSlice({
                 selectCompany.isSelect = !selectCompany.isSelect;
             }
         },
-        toggleAllSelectCompanies: (state) => {
+        toggleAllSelectCompanies: (state, action: PayloadAction<boolean>) => {
             state.companies = state.companies.map((company) => ({
                 ...company,
-                isSelect: !company.isSelect,
+                isSelect: action.payload,
             }));
         },
         editTableCell: (state, action: PayloadAction<CellEditPayload>) => {

@@ -10,7 +10,7 @@ import style from './Button.module.scss';
 
 export const ButtonAddCompany = forwardRef<TableHandle, ButtonHTMLAttributes<HTMLButtonElement>>((_, ref) => {
 
-    const [countCompanyList, setCountCompanyList] = useState(50); 
+    const [countCompanyList, setCountCompanyList] = useState(51); 
 
     /* Переменная countCompanyList хранит общее количество компаний в списке.
     Установлено на 50, так как это фиксированное значение, известное заранее.

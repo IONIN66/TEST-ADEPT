@@ -56,7 +56,7 @@ export const CompaniesTableBody = forwardRef<TableHandle>((_, ref) => {
             <tbody>
                 {companies.map((company) => {
                     return (
-                        <tr key={company.id} className={`${style.companies__table__row} ${company.isSelect === true ? style.isSelectCompany : ''}`}>
+                        <tr key={company.id} className={`${style.companies__table__row} ${company.isSelect ? style.isSelectCompany : ''}`}>
                             <td className={style.companies__table__cell}>
                                 <input 
                                     type="checkbox" 
