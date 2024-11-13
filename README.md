@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# Создайте одностраничное приложение “Список компаний”, используя библиотеку React.js.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Требования:
 
-Currently, two official plugins are available:
+- React,
+- redux(redux-toolkit), 
+- TS, 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Остальное на ваше усмотрение, НО стоит использовать минимальное кол-во библиотек(например, таблицу нужно точно сделать самостоятельно, без сторонних библиотек).
 
-## Expanding the ESLint configuration
+## Дано: 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Имеется таблица со списком компаний. Данные в таблице должны храниться в store.
+  
+Данные для таблицы - фейковые, создать самостоятельно.
+  
+### Шапка таблицы "компании": 
+Чекбокс “Выделить всё” 
+### Тело таблицы имеет столбцы: 
+| Чекбокс | Название компании | Адрес  
 
-- Configure the top-level `parserOptions` property like this:
+### Функционал:
+При клике по чекбоксу в строке, соответствующая строка выделяется цветом на ваше усмотрение. 
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+При клике по чекбоксу “Выделить всё” - выделяются все строки.  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Все поля таблицы редактируемые.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+В таблице реализовать механизм добавления/удаления компаний по соответствующим кнопкам. Удаление может быть множественное (если выделены несколько строк).  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Будет плюсом: 
+Предусмотреть вариант когда компаний может быть 10 000+(желательно предложить вариант без переключения по страницам, динамическая загрузка при скролле)  
