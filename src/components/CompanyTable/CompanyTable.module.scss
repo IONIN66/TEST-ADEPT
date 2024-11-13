@@ -1,0 +1,63 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/colors' as *;
+
+table{
+    border-collapse: collapse;
+    border: 0,
+}
+
+.companies{
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.companies__table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.companies__table__row {
+    :nth-child(1) {
+        @include flexCentral;
+    }
+}
+
+.companies__table__header{
+    background-color: $primary-color-border;
+    padding: 15px;
+    text-align: center;
+    color: $total-white;
+}
+
+.companies__table__content{
+    height:300px;
+    overflow-y: auto;
+    margin-top: 0px;
+    border: 1px solid $primary-color-border;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: 5px 5px 5px -5px $webkit-color-box-shadow inset;
+        background-color: inherit;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: $primary-color-border;
+    }
+}
+
+.companies__table__footer{
+    @include flexCentral;
+    gap: 30px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid $primary-color-border;
+    width: 100%;
+    border-top: none
+}

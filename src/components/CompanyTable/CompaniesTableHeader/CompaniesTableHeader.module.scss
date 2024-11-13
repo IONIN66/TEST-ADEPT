@@ -1,0 +1,11 @@
+@use '../../../styles/mixins' as *;
+
+.companies__table__row{
+    :nth-child(1){
+    @include flexCentral;
+    }
+}
+
+.companies__allInputCheckbox{
+    cursor: pointer;
+}

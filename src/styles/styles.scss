@@ -1,0 +1,23 @@
+@use '../styles/colors' as *;
+@use '../styles/mixins' as *;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    color: $total-white;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    @include flexCentral;
+    background: linear-gradient(to right, $main-color-one, $main-color-two);
+}
+
